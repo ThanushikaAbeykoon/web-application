@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:ital,wght@1,300&display=swap');
+
+:root{
+    --main-color: #d3ad7f;
+    --black:#13131a;
+    --bg:#010103;
+    --border: .1rem solid rgba(255,255,255,.3)
+
+}
+*{
+    font-family:'Roboto', sans-serif ;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth; 
+}
+html::-webkit-scrollbar{
+    width: .8rem;
+}
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+html::-webkit-scrollbar-thumb{
+    background:#fff;
+    border-radius: 5rem;    
+}
+body{
+    background: var(--bg);
+}
+.menu .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem,1fr));
+    gap: 1.5rem;
+
+    }
+    .menu .box-container .box{
+        padding: 5rem;
+        text-align: center;
+        border: black;
+    }
+    .menu .box-container .box img{
+        height: 10rem;
+    }
+    .menu .box-container .box h3{
+        color: white;
+        font-size: 2rem;
+        padding: 1rem 0;
+
+    }
+    .menu .box-container .box .price{
+        color: white;
+        font-size: 2.5rem;
+        padding: 5rem 0;
+        
+    }
+
+    .menu .box-container .box .price span{
+        color: white;
+        font-size: 2.5rem;
+        text-decoration: line-through;
+    }
+    .menu .box-container .box:hover{
+        background: #727171;
+
+    }
+    .menu .box-container .box:hover >*{
+        
+        color: black;
+    }

@@ -1,0 +1,61 @@
+/* Add your styling here */
+body {
+    background-image:url("https://www.unileverfoodsolutions.co.in/wp-content/uploads/2020/12/image.1590918326475.jpg") ;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  main {
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+      padding: 20px;
+      color: white;
+  }
+  
+  .cart,
+  .products {
+      width: 45%;
+      color: white;
+  }
+  
+  .cart-items,
+  .product-list {
+      border: 1px solid #ccc;
+      padding: 10px;
+      max-height: 300px;
+      overflow-y: auto;
+      color: white;
+  }
+  
+  /* CSS for buttons */
+  button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 4px;
+    background-color: rgb(97, 96, 96);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: rgb(30, 1, 120)
+  }
+  
+  /* CSS for anchor within button */
+  button a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  
+  
+  
+  

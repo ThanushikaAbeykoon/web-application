@@ -1,0 +1,127 @@
+<html>
+    <head>
+        <title>Enter Delivery Details</title>
+        <!-- Add Css -->
+        <style>
+            body{
+            background-image:url("https://images.unsplash.com/photo-1458253756247-1e4ed949191b?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZGFyayUyMGZvb2QlMjBwaG90b2dyYXBoeXxlbnwwfHwwfHx8MA%3D%3D") ;
+            background-size: 1300px 650px;
+            }
+            .register-form{
+            width: 350px;
+            top: 70%;
+            left: 20%;
+            transform: translate(-50%, -50%);
+            position: absolute;  
+            color:white;
+            }
+            .register-form table{
+              width: 600px;
+             height: 300px;
+             font-family: 'Times New Roman', Times, serif;
+             font-size: 25px;
+             color: white;
+            }
+            .register-form table input{
+             font-size: 16px;
+            width: 100%;
+            padding: 15px 10px;
+            border: 0;
+            outline: none;
+            border-radius: 5px;
+            background-color: burlywood;
+            }
+            h1{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 60px;
+            font-style: italic;
+            color: white; 
+
+            }
+            button{
+            background-color: #d3ad7f;
+            padding: 10px 25px;
+            border-color:black;
+            border-radius: 10px;
+            color: rgb(193, 203, 203);
+            font-size: 20px;
+            }
+
+
+        </style>
+
+
+    </head>
+
+    <body>
+        <br>
+        <h1>Add Your Delivery Details</h1>
+        <div class="register-form">
+            <form action="delivery.php" method="post">
+                <table>
+                    <tr>
+                        <td>Name</td>
+                        <td><input type="text" name="dname" placeholder="Enter your Name"></td>
+                    </tr>
+                    <tr>
+                        <td>Deliver Address</td>
+                        <td><input type="text" name="address" placeholder="Enter Delivery Address"></td>
+                    </tr>
+                    <tr>
+                        <td>Contact Number</td>
+                        <td><input type="number" name="contactno" placeholder="Enter vaild Contact Number"></td>
+                    </tr>
+                    <tr>
+                        <td>NIC</td>
+                        <td><input type="text" name="nic" placeholder="NIC"></td>
+                    </tr>
+                    
+                </table>
+                <br>
+                <button type="submit">Sumbit</button>
+                <br><br>
+                <a href="./web.html">Back to Home</a>
+            </form>
+        </div>
+        
+    
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

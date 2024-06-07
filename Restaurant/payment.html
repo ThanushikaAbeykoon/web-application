@@ -1,0 +1,214 @@
+<html>
+<head>
+    <title>Payment Form</title>
+    <style>
+        *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+        
+        }
+
+        .container{
+            
+            position: absolute;
+            width: 1000px;
+            height: 600px;
+            border: 1px solid; 
+            background-color: white ;
+            background-image: url("https://img.rasset.ie/001b3a5b-500.jpg");
+            background-size:cover;
+            background-repeat:no-repeat;
+            background-position:center;
+            color: black;
+            
+            
+            display: flex;
+            flex-direction: column;
+            padding: 40px;
+            justify-content:space-around;
+        }
+        h3{
+            color: white;
+        }
+
+        body{
+            width:100%;
+            height:100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #727676 ;
+            
+        }
+
+            
+        .container p{
+            text-align: center;
+            
+            color: #B91725;
+        }
+
+
+        .cards{
+            width: 80px;
+        
+            background-image: url("https://www.pngitem.com/pimgs/m/651-6513439_payment-icons-paypal-hd-png-download.jpg");
+
+        }
+        .first-row{
+            display: flex;
+        }
+
+        .owner{
+            width: 100%;
+            margin-right: 40px;
+            background-image: url("https://www.pngitem.com/pimgs/m/651-6513439_payment-icons-paypal-hd-png-download.jpg");
+
+        }
+
+        .input-field{
+            border: 1px solid #999;
+        }
+
+        .input-field input{
+            width: 100%;
+            border:none;
+            outline: none;
+            padding: 10px;
+        }
+
+        .selection{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: black;
+        }
+
+        .selection select{
+            padding: 10px 20px;
+        }
+
+        a{
+            background-color: #9A096E;
+            color: white;
+            text-align: center;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 10px;
+            font-size: 18px;
+            transition: 0.5s;
+        }
+
+        a:hover{
+            background-color: dodgerblue;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p> <font size="20"><b>Payment Method</font></b></p>
+        <div class="cards" align="center"></div>
+        <div class="logo" align="center">
+            <img src="https://help.zazzle.com/hc/article_attachments/360010513393/Logos-01.png" width="50%" height="100">
+        </div>
+        <div class="first-row">
+            <div class="owner">
+                <h3>NAME ON CARD</h3>
+                <div class="input-field">
+                    <input type="text" name="name" id="cardName">
+                </div>
+            </div>
+        </div>
+            <div class="second">
+            <div class="cvv">
+                <h3>CVV</h3>
+                <div class="input-field">
+                    <input type="password" name="cvv" id="cvv">
+                </div>
+            </div>
+        </div>
+    
+        <div class="second-row">
+            <div class="card-number">
+                <h3>CARD NUMBER</h3>
+                <div class="input-field">
+                    <input type="text"  name="card_no" id="cardNumber">
+                </div>
+            </div>
+        </div>
+        <div class="third-row">
+            <h3>EXP DATE</h3>
+            <div class="selection">
+                <div class="date">
+                    <select name="months" name="date" id="months">
+                        <option value="Jan">Jan</option>
+                        <option value="Feb">Feb</option>
+                        <option value="Mar">Mar</option>
+                        <option value="Apr">Apr</option>
+                        <option value="May">May</option>
+                        <option value="Jun">Jun</option>
+                        <option value="Jul">Jul</option>
+                        <option value="Aug">Aug</option>
+                        <option value="Sep">Sep</option>
+                        <option value="Oct">Oct</option>
+                        <option value="Nov">Nov</option>
+                        <option value="Dec">Dec</option>   
+                    </select>
+                    <select name="years" id="years">
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
+                        <option value="2025">2025</option>
+                        <option value="2026">2026</option>
+                        <option value="2027">2027</option>
+                    </select>
+                </div>
+            </div>    
+        </div>
+        <br><br>
+ 
+       <a href="javascript:void(0);" onclick="validateDetails()">Check Validation</a><br><br>
+       <a href="payment.php"> Pay Now</a><br><br>
+       <a href="web.html">Cancel </a>
+    </div>
+
+    <script>
+        function validateDetails() {
+            var cardName = document.getElementById("cardName").value;
+            var cvv = document.getElementById("cvv").value;
+            var cardNumber = document.getElementById("cardNumber").value;
+    
+            if (cardName === '') {
+                alert("Name is required.");
+                return;
+            } 
+            if (cardNumber === '') {
+                alert("cardNumber is required.");
+                return;
+            } 
+
+            if (cardNumber.length !== 12) {
+                alert("Card number must be 12 numbers.");
+                event.preventDefault();
+                return;
+            }
+           
+            if (cvv === '') {
+                alert("cvv is required.");
+                return;
+            } 
+
+            if (cvv.length !== 3) {
+                alert("CVV must be 3 numbers.");
+                event.preventDefault();
+                return;
+            }
+            alert("Payment successfully.");
+        }
+    </script>
+    
+</body>
+</html>
